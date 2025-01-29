@@ -1,0 +1,18 @@
+.NavBar {
+    width: 100%;
+    height: var(--navbar-height);
+    background: var(--inverted-bg-color);
+    display: flex;
+    align-items: center;
+}
+
+.Links {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    width: 100%;
+
+    :nth-child(n) {
+        margin: 0 1rem;
+    }
+}

@@ -1,0 +1,61 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "react",
+    "react-hooks",
+    "jsx-a11y",
+    "i18next"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:i18next/recommended"
+  ],
+  "rules": {
+    "semi": [
+      "error",
+      "always"
+    ], // Требует точку с запятой
+    "quotes": [
+      "error",
+      "single"
+    ], // Использование одинарных кавычек
+    "indent": [
+      "error",
+      4
+    ], // Отступы в 4 пробела
+    "no-console": "warn", // Предупреждение при использовании console.log
+    "comma-dangle": [
+      "error",
+      "always-multiline"
+    ], // Висячая запятая для многострочных объектов/массивов
+    "react/prop-types": "off", // Отключает проверку prop-types (TypeScript уже занимается типами)
+    "react-hooks/rules-of-hooks": "error", // Проверяет правила использования хуков
+    "react-hooks/exhaustive-deps": "warn", // Предупреждает о недостающих зависимостях в хуках
+    "react/react-in-jsx-scope": "off", // Отключаем, так как React 17+ не требует импорта React
+    "@typescript-eslint/explicit-module-boundary-types": "off", // Отключаем обязательное указание типов возвращаемых значений
+    "jsx-a11y/anchor-is-valid": "off" // Пример отключения правила
+  },
+  "settings": {
+    "react": {
+      "version": "detect" // Автоматически определяет версию React
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es2021": true,
+    "jest": true
+  }
+}
